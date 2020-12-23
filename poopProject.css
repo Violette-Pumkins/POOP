@@ -76,10 +76,10 @@
 
 /* -------------Mise en forme liste+boutons sup/mod-------------- */
 #mod {
-    background-color: rgb(77, 180, 77);
-    margin-left: 800px;
-    width: 110px;
-    display: none;
+    /* background-color: rgb(77, 180, 77);
+     margin-left: 500px;
+     width: 110px;
+    display: none; */
 }
 
 #sup {
@@ -118,5 +118,11 @@ footer {
 footer p {
     margin: 0px;
 }
+
+/* --------------------------------- MODAL MODIFIER --------------------------- */
+.modal-content{
+    background-color: yellow;
+}
+
 
 
