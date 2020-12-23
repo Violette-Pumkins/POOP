@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Projet Team Champions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="poopProject.css" />
+    
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div id="titre" class="row">
+            <h1 class="col-md-8">PoopProject</h1>
+            <p class="col-md-4">Base de données des stagiaires</p>
+        </div>
+        <div id="ajout_search" class="row">
+
+            <div class="col-md-1">
+                <a id="ajouter" class="btn btn-default" title="Ajouter un profil" data-toggle="modal"
+                    data-target="#ajout_modal">
+                    <span class="glyphicon glyphicon-user"></span>
+                </a>
+            </div>
+            <!-- Modal -->
+
+            <div class="modal fade" id="ajout_modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Ajouter une personne</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" method="get">
+                                <div class="formulaire">
+                                    <label for="nom">Nom : </label>
+                                    <input type="text" id="nom" name="user_name"
+                                        title="Rentrer le nom de la personne à ajouter">
+                                </div>
+                                <br>
+                                <div class="formulaire">
+                                    <label for="prenom">Prénom : </label>
+                                    <input type="text" id="prenom" name="user_name"
+                                        title="Rentrer le prénom de la personne à ajouter">
+                                </div>
+                                <div id="bouton_ajout">
+                                    <input type="submit" value="Valider" id="controle" onclick="return verifForm()">
+                                    <input type="reset" value="Annuler" id="annuler">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="recherche" class="col-md-11">
+                <button class="glyphicon glyphicon-search" aria-hidden="true"
+                    title="Rechercher un nom ou un prénom"></button>
+                <input type="search" id="site-search" name="q" aria-label="Search through site content"
+                    placeholder="Nom">
+                <input type="search" id="site-search" name="q" aria-label="Search through site content"
+                    placeholder="Prénom">
+            </div>
+        </div>
+    </header>
+
+
+
+    <main id="main">
+        <h2>Résultat de la Recherche :</h2>
+        <div id="listes">
+            
+
+            <span id=nom_prenom  class="col-md-10">Nom Prénom</span>
+            <button id="ajaxButton" type="button" onclick="loadDoc()">Faire une requête</button>
+           
+            <!-- <div id="bloc_fiche">
+                <span class="col-md-10">Nom Prénom</span>
+                <button id="modifier">Modifier</button>
+                <button id="supprimer" title="Supprimer la personne de la liste">Supprimer</button>
+            </div>  -->
+
+
+        </div>
+      
+    </main>
+    
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+<!-- 
+<footer class="container">
+    <h2 class="col-md-6">Team PoopProject</h2>
+    <div class="col-md-6">
+        <p>Violette</p>
+        <p>Teklit</p>
+        <p>Stefan</p>
+        <p>François</p>
+        <p>Manuel</p>
+        <p>Appoline</p>
+    </div>
+</footer> -->
+
+
+</html>

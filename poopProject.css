@@ -1,0 +1,122 @@
+#titre {
+    border: 1px solid black;
+    border-radius: 5px 5px 5px;
+    margin: 20px;
+    background-color: rgb(231, 222, 222);
+}
+
+#titre p {
+    margin-top: 30px;
+}
+
+#recherche {
+   
+    padding-top: 5px ;
+    padding-left: 500px;
+   
+    
+}
+
+#ajout_search{
+    margin: 20px;
+
+}
+/* --------------- Main ---------------------- */
+
+#nom_prenom{
+    font-weight: bold;
+}
+
+
+#main {
+    border: 1px solid black;
+    margin: 60px;
+    margin-top: 10px; 
+}
+
+#bloc_fiche {
+    border: 1px solid rgb(0, 10, 0);
+    margin: 5px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#main h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#modifier, #supprimer {
+    display: none;
+}
+
+#bloc_fiche:hover #modifier, #bloc_fiche:hover #supprimer {
+    display: inline-block;
+   
+}
+/* ------------------- Modal Ajout -------------- */
+
+.modal-body label{
+    width: 150px;
+}
+
+.modal-body #bouton_ajout{
+   margin-top: 15px;
+   padding-left: 400px;
+
+}
+
+.modal-body #annuler{
+   margin-left: 10px;
+}
+
+.modal-title {
+   font-weight: bold;
+}
+
+/* -------------Mise en forme liste+boutons sup/mod-------------- */
+#mod {
+    background-color: rgb(77, 180, 77);
+    margin-left: 800px;
+    width: 110px;
+    display: none;
+}
+
+#sup {
+    background-color: rgb(218, 80, 80);
+    margin-left: 800px;
+    width: 110px;
+    display: none;
+    
+}
+
+#listes div{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#listes div:hover{
+    background-color: lightblue;
+}
+
+#listes div:hover #mod, #listes div:hover #sup{
+display: inline-block;
+}
+
+
+
+/* #listes button{
+  
+} */
+
+/* -----------------Footer--------------------- */
+footer {
+    position: absolute;bottom: 0;;
+    border: 1px solid black;
+    margin: 20px;
+}
+footer p {
+    margin: 0px;
+}
+
+
