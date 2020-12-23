@@ -1,3 +1,6 @@
+const srv='127.0.0.1:5000';
+//const srv='srvapi';
+
 function get(url) {
     console.log("GET : " + url);
 
@@ -6,7 +9,6 @@ function get(url) {
     xhr.send(null);
     xhr.responseType = 'json';
     xhr.onload = function () {
-        //var users = JSON.parse(xhr.responseText);
         var listStagaire = xhr.response;
 
         if (xhr.readyState == 4 && xhr.status == "200") {
@@ -14,7 +16,7 @@ function get(url) {
             console.log(listStagaire);
             afficher(listStagaire);
         } else {
-            console.error(users);
+            console.error(listStagiaire);
         }
     }
 }
@@ -106,7 +108,8 @@ function rechGet(url) {
     
         var lists = document.getElementById('listes');
         lists.innerHTML = '';
-        get(' http://srvapi/api/stagiaires');
+
+        get(' http://'+srv+'/api/stagiaires');
         
     }  
     function get(url) {
@@ -228,7 +231,7 @@ function modifier(event) {
         nom: "teklit",
         prenom: "TEWOLDE"
     }
-    updateUser(`http://srvapi/api/stagiaire/${modID}`, modPost);
+    updateUser(`http://${srv}/api/stagiaire/${modID}`, modPost);
 }
 
 function supprimer(event) {
@@ -236,7 +239,7 @@ function supprimer(event) {
     var delID = event.getAttribute("data-id");
     console.log(delID);
 
-    delUser(`http://srvapi/api/stagiaire/${delID}`);
+    delUser(`http://${srv}/api/stagiaire/${delID}`);
 }
 // recherche
 function recherche() {
@@ -244,11 +247,11 @@ function recherche() {
     var prenomReche = document.getElementById("prenomrecherche").value;
     if (nomReche && nomReche.length < 2) {
         //console.log(nomReche);
-        get(`http://srvapi/api/stagiaires/nom/${nomReche}`);
+        get(`http://${srv}/api/stagiaires/nom/${nomReche}`);
     }
     if (prenomReche && prenomReche.length < 2) {
         // console.log(prenomReche);
-        get(`http://srvapi/api/stagiaires/prenom/${prenomReche}`);
+        get(`http://${srv}/api/stagiaires/prenom/${prenomReche}`);
     }
 }
 
@@ -300,7 +303,7 @@ function creerCompte() {
         nom: nomVal,
         prenom: prenomVal
     }
-    addUser('http://srvapi/api/stagiaire', post)
+    addUser('http://'+srv+'/api/stagiaire', post)
 }
 
   
