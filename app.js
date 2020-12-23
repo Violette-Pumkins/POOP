@@ -7,7 +7,7 @@ function get(url) {
     xhr.responseType = 'json';
     xhr.onload = function () {
         //var users = JSON.parse(xhr.responseText);
-        var listStagaire = xhr.response;
+        var listStagaire = xhr.response;  
         
         if (xhr.readyState == 4 && xhr.status == "200") {
             // console.table(users);
